@@ -40,6 +40,11 @@ Cave::Cave(glm::vec2 position):BaseResource(position,glm::vec4(0,0,0,1),20)
 	type = CAVE;
 }
 
+Enemy::Enemy(glm::vec2 position) : BaseResource(position, glm::vec4(1, 0, 1, 1), 20)
+{
+	type = ENEMY;
+}
+
 Agent::Agent(glm::vec2 position) : BaseAgent(position, glm::vec4(1, 1, 0, 1), 20)
 {
 	tiredness = 1;

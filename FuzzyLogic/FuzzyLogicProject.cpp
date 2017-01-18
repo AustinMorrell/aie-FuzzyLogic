@@ -53,6 +53,8 @@ void FuzzyProject::FuzzyLogicExample()
 	worldController->addObject(cave);
 	Food* food = new Food(glm::vec2(300, 600));
 	worldController->addObject(food);
+	Enemy* enemy = new Enemy(glm::vec2(500, 600));
+	worldController->addObject(enemy);
 
 	//the following code sets up all the membership functions for the fuzzy sets
 
@@ -67,9 +69,9 @@ void FuzzyProject::FuzzyLogicExample()
 	fuzzyEngine.full = new rightShoulderMembershipFunction(.8f, .9f, "full");
 
 	//membership functions for the thirst set
-	fuzzyEngine.WeekFromThirsty = new leftShoulderMembershipFunction(0.1f, 0.3f, "week from thirst");
+	fuzzyEngine.WeekFromThirsty = new leftShoulderMembershipFunction(0.1f, 0.4f, "week from thirst");
 	fuzzyEngine.veryThirsty = new TriangleFunction(0.1f, 0.3f, 0.5f, "very thristy");
-	fuzzyEngine.thirsty = new TriangleFunction(0.3f, 0.5f, 0.7f, "thristy");
+	fuzzyEngine.thirsty = new TriangleFunction(0.3f, 0.5f, 0.6f, "thristy");
 	fuzzyEngine.notThirsty = new rightShoulderMembershipFunction(.5f, .7f, "not thirsty");
 
 	//membership functions for the distance set

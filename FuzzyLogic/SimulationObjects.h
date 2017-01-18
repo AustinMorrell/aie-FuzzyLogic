@@ -8,6 +8,7 @@ enum WorldObjectType
 	WATER,
 	FOOD,
 	CAVE,
+	ENEMY,
 };
 
 using namespace std;
@@ -49,6 +50,12 @@ class Cave:public BaseResource
 {
 	public:
 	Cave(glm::vec2 position);
+};
+
+class Enemy :public BaseResource
+{
+	public:
+	Enemy(glm::vec2 position);
 };
 
 class BaseAgent:public WorldObject
